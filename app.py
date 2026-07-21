@@ -94,6 +94,23 @@ KSP-001
 </div>
 """, unsafe_allow_html=True)
 
+    st.markdown("""
+    <div id="google_translate_element" style="margin-top:20px; border-radius:10px; overflow:hidden;"></div>
+    <img src onerror='
+        if(typeof google === "undefined" || typeof google.translate === "undefined") {
+            window.googleTranslateElementInit = function() {
+                new google.translate.TranslateElement({
+                    pageLanguage: "en", 
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, "google_translate_element");
+            };
+            var s = document.createElement("script");
+            s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            document.head.appendChild(s);
+        }
+    ' style='display:none'>
+    """, unsafe_allow_html=True)
+
     st.divider()
 
     st.write("📅", datetime.date.today())

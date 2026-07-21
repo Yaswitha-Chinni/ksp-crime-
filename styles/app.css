@@ -399,5 +399,14 @@ footer {
     visibility: hidden;
 }
 .stDeployButton {
-    display: none;
+}
+
+/* ===========================
+GOOGLE TRANSLATE FIXES
+=========================== */
+.skiptranslate iframe {
+    display: none !important;
+}
+body {
+    top: 0px !important;
 }
