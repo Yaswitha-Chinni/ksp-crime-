@@ -384,6 +384,20 @@ font-size:34px;
 
 font-weight:700;
 
-line-height:1;
+}
 
+/* ===========================
+HIDE STREAMLIT HEADER
+=========================== */
+header[data-testid="stHeader"] {
+    visibility: hidden;
+}
+#MainMenu {
+    visibility: hidden;
+}
+footer {
+    visibility: hidden;
+}
+.stDeployButton {
+    display: none;
 }
