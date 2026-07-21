@@ -111,50 +111,50 @@ KSP-001
 # ==========================
 
 dashboard = st.Page(
-    "pages/dashboard.py",
+    "views/dashboard.py",
     title="Dashboard",
     icon="📊",
     default=True
 )
 
 chat = st.Page(
-    "pages/AI_chat.py",
+    "views/AI_chat.py",
     title="AI Crime Assistant",
     icon="🤖"
 )
 
 voice = st.Page(
-    "pages/voice_assistant.py",
+    "views/voice_assistant.py",
     title="Voice Assistant",
     icon="🎤"
 )
 
 fir = st.Page(
-    "pages/FIR_upload.py",
+    "views/FIR_upload.py",
     title="FIR Upload",
     icon="📎"
 )
 
 report = st.Page(
-    "pages/export_report.py",
+    "views/export_report.py",
     title="Export Report",
     icon="📄"
 )
 
 heatmap = st.Page(
-    "pages/Crime_heatmap.py",
+    "views/Crime_heatmap.py",
     title="Crime Heatmap",
     icon="🗺️"
 )
 
 network = st.Page(
-    "pages/network_analysis.py",
+    "views/network_analysis.py",
     title="Network Analysis",
     icon="👥"
 )
 
 prediction = st.Page(
-    "pages/prediction.py",
+    "views/prediction.py",
     title="Crime Prediction",
     icon="📈"
 )
