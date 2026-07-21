@@ -94,22 +94,26 @@ KSP-001
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <div id="google_translate_element" style="margin-top:20px; border-radius:10px; overflow:hidden;"></div>
-    <img src onerror='
-        if(typeof google === "undefined" || typeof google.translate === "undefined") {
-            window.googleTranslateElementInit = function() {
-                new google.translate.TranslateElement({
-                    pageLanguage: "en", 
-                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                }, "google_translate_element");
+    st.markdown('<div id="google_translate_element" style="margin-top:20px; border-radius:10px; overflow:hidden;"></div>', unsafe_allow_html=True)
+
+    import streamlit.components.v1 as components
+    components.html("""
+    <script>
+        const doc = window.parent.document;
+        if (!doc.getElementById('google-translate-script')) {
+            window.parent.googleTranslateElementInit = function() {
+                new window.parent.google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    layout: window.parent.google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
             };
-            var s = document.createElement("script");
-            s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-            document.head.appendChild(s);
+            const s = doc.createElement('script');
+            s.id = 'google-translate-script';
+            s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            doc.head.appendChild(s);
         }
-    ' style='display:none'>
-    """, unsafe_allow_html=True)
+    </script>
+    """, height=0, width=0)
 
     st.divider()
 
