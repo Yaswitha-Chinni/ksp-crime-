@@ -19,36 +19,6 @@ with open("styles/app.css") as css:
     )
 
 # ==========================
-# LOGIN PAGE
-# ==========================
-
-if "logged_in" not in st.session_state:
-    st.session_state.logged_in = False
-
-if not st.session_state.logged_in:
-    st.markdown("<br><br>", unsafe_allow_html=True)
-    st.markdown("<h2 style='text-align: center; color: white;'>🛡️ KSP Crime Intelligence Platform</h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: #a0aec0;'>Restricted Access. Please log in.</p>", unsafe_allow_html=True)
-    
-    col1, col2, col3 = st.columns([1, 1, 1])
-    with col2:
-        st.info("Sample Credentials — Username: **admin** | Password: **password123**")
-        with st.form("login_form"):
-            username = st.text_input("Username")
-            password = st.text_input("Password", type="password")
-            submitted = st.form_submit_button("Login", use_container_width=True)
-            
-            if submitted:
-                if username == "admin" and password == "password123":
-                    st.session_state.logged_in = True
-                    st.rerun()
-                else:
-                    st.error("Invalid username or password")
-    
-    # Stop execution here if not logged in
-    st.stop()
-
-# ==========================
 # HEADER
 # ==========================
 
