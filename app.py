@@ -80,10 +80,8 @@ KSP-001
 
 <h4>🤖 AI STATUS</h4>
 
-✅ Gemini AI<br>
 ✅ Crime Database<br>
-✅ Prediction Engine<br>
-✅ Voice Assistant
+✅ Prediction Engine
 
 </div>
 """, unsafe_allow_html=True)
@@ -117,17 +115,7 @@ dashboard = st.Page(
     default=True
 )
 
-chat = st.Page(
-    "views/AI_chat.py",
-    title="AI Crime Assistant",
-    icon="🤖"
-)
 
-voice = st.Page(
-    "views/voice_assistant.py",
-    title="Voice Assistant",
-    icon="🎤"
-)
 
 fir = st.Page(
     "views/FIR_upload.py",
@@ -162,8 +150,6 @@ prediction = st.Page(
 pg = st.navigation(
     [
         dashboard,
-        chat,
-        voice,
         fir,
         report,
         heatmap,
