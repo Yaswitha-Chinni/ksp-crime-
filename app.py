@@ -111,7 +111,7 @@ KSP-001
 # ==========================
 
 dashboard = st.Page(
-    "pages/Dashboard.py",
+    "pages/dashboard.py",
     title="Dashboard",
     icon="📊",
     default=True
@@ -124,37 +124,37 @@ chat = st.Page(
 )
 
 voice = st.Page(
-    "pages/Voice_Assistant.py",
+    "pages/voice_assistant.py",
     title="Voice Assistant",
     icon="🎤"
 )
 
 fir = st.Page(
-    "pages/FIR_Upload.py",
+    "pages/FIR_upload.py",
     title="FIR Upload",
     icon="📎"
 )
 
 report = st.Page(
-    "pages/Export_Report.py",
+    "pages/export_report.py",
     title="Export Report",
     icon="📄"
 )
 
 heatmap = st.Page(
-    "pages/Crime_Heatmap.py",
+    "pages/Crime_heatmap.py",
     title="Crime Heatmap",
     icon="🗺️"
 )
 
 network = st.Page(
-    "pages/Network_Analysis.py",
+    "pages/network_analysis.py",
     title="Network Analysis",
     icon="👥"
 )
 
 prediction = st.Page(
-    "pages/Prediction.py",
+    "pages/prediction.py",
     title="Crime Prediction",
     icon="📈"
 )
